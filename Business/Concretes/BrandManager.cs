@@ -39,10 +39,22 @@ namespace Business.Concretes
             return createdBrandResponse;
 
         }
-
         public List<GetAllBrandResponse> GetAll()
         {
-            throw new NotImplementedException();
+            List<Brand> brands = new List<Brand>();
+
+            List<GetAllBrandResponse> getAllBrandResponses = new List<GetAllBrandResponse>();
+
+            foreach (var brand in brands)
+            {
+                GetAllBrandResponse getAllBrandResponse = new GetAllBrandResponse();
+                getAllBrandResponse.Name = brand.Name;
+                getAllBrandResponse.Id = brand.Id;
+                getAllBrandResponse.CreatedDate = brand.CreatedDate;
+
+                getAllBrandResponses.Add(getAllBrandResponse);
+            }
+            return getAllBrandResponses;
         }
     }
 }
