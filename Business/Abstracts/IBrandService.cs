@@ -1,4 +1,6 @@
-﻿using Entities.Abstracts;
+﻿using Business.Dtos.Requests;
+using Business.Dtos.Responses;
+using Entities.Abstracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,7 @@ namespace Business.Abstracts
     {
         //Brand Add(Brand brand);
         CreatedBrandResponse Add(CreateBrandRequest brand);
-        
-        List<Brand> GetAll();
+        List<GetAllBrandResponse> GetAll();
+
     }
 }
